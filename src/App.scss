@@ -1,5 +1,10 @@
-$background: #fff;
+@import "./styles/uikit";
 
-body {
-  background-color: $background;
+/*
+* Sidebar
+*/
+.sidebar {
+  .sidebar-menu {
+    padding-top: 20px;
+  }
 }
