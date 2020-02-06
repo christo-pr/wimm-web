@@ -1,18 +1,20 @@
 import React from "react"
-import "./App.scss"
+import { Router } from "@reach/router"
 
+import "./App.scss"
 import { Header } from "./components/"
+import { HomePage, ExpensesPage, PaymentsPage } from "./pages/"
 
 function App() {
   return (
     <>
       <Header />
       <div className="uk-container">
-        <h1>TEST REACT</h1>
-        <div className="uk-placeholder">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi,
-          quibusdam!
-        </div>
+        <Router>
+          <HomePage path="/" />
+          <ExpensesPage path="expenses" />
+          <PaymentsPage path="payments" />
+        </Router>
       </div>
     </>
   )

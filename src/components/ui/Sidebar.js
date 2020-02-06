@@ -1,10 +1,22 @@
-import React from "react"
+import React, { useRef } from "react"
+import UIkit from "uikit"
+import { Link } from "@reach/router"
 
 function Sidebar(props) {
   const { id } = props
+  const offCanvas = useRef(null)
+
+  const closeSidebar = () => {
+    UIkit.offcanvas(offCanvas.current).hide()
+  }
 
   return (
-    <div id={id} data-uk-offcanvas="overlay: true" className="sidebar">
+    <div
+      id={id}
+      data-uk-offcanvas="overlay: true"
+      className="sidebar"
+      ref={offCanvas}
+    >
       <div className="uk-offcanvas-bar">
         <button
           className="uk-offcanvas-close"
@@ -14,31 +26,31 @@ function Sidebar(props) {
 
         <ul className="uk-list uk-list-divider sidebar-menu">
           <li>
-            <a href="">
+            <Link to="/" onClick={closeSidebar}>
               <span
                 data-uk-icon="home"
                 className="uk-margin-small-right"
               ></span>
               Inicio
-            </a>
+            </Link>
           </li>
           <li className="uk-margin-top">
-            <a href="">
+            <Link to="/expenses" onClick={closeSidebar}>
               <span
                 data-uk-icon="cart"
                 className="uk-margin-small-right"
               ></span>
               Gastos
-            </a>
+            </Link>
           </li>
           <li className="uk-margin-top">
-            <a href="">
+            <Link to="/payments" onClick={closeSidebar}>
               <span
                 data-uk-icon="credit-card"
                 className="uk-margin-small-right"
               ></span>
               Pagos
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
