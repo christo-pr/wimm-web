@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 
 import api from "../utils/api"
 
+import { DateFilter } from "../components/"
+
 function Expenses() {
   const [expenses, setExpenses] = useState([])
 
@@ -14,7 +16,10 @@ function Expenses() {
 
   return (
     <>
-      <h2>Expenses</h2>
+      <div className="uk-flex uk-flex-column uk-flex-cente">
+        <button className="uk-button uk-button-primary">Agregar + </button>
+        <DateFilter />
+      </div>
       <hr />
       <ul className="uk-list uk-list-divider">
         {expenses.map(expense => (

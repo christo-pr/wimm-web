@@ -1,4 +1,4 @@
-@import "./styles/uikit";
+@import "./styles/vendor";
 @import "./styles/reset";
 @import "./styles/utils";
 @import "./styles/variables";
@@ -58,9 +58,25 @@ nav {
 }
 
 /*
+* DateFilter
+*/
+.date-filter {
+  span {
+    padding-top: 4px;
+  }
+
+  div.react-datepicker__input-container {
+    border: 1px solid $gray_color;
+    border-radius: 10px;
+    input[type="text"] {
+      text-align: center;
+    }
+  }
+}
+
+/*
 * Main container
 */
-
 .main-container {
   overflow: scroll;
 }
