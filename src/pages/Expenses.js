@@ -8,6 +8,7 @@ function Expenses() {
   useEffect(() => {
     api.getExpenses().then(res => {
       setExpenses(res.expenses)
+      console.log(res.expenses)
     })
   }, [])
 
@@ -15,7 +16,7 @@ function Expenses() {
     <>
       <h2>Expenses</h2>
       <hr />
-      <ul>
+      <ul className="uk-list uk-list-divider">
         {expenses.map(expense => (
           <li key={expense.id}>{expense.id}</li>
         ))}

@@ -1,6 +1,6 @@
-import { Server, Model, Factory } from "miragejs"
+import { Server, Model } from "miragejs"
 
-import { expenseFactory } from "./factories"
+import factories from "./factories"
 
 function init() {
   new Server({
@@ -8,9 +8,7 @@ function init() {
       expense: Model
     },
 
-    factories: {
-      expense: Factory.extend(expenseFactory)
-    },
+    factories: factories,
 
     routes() {
       this.namespace = "api"

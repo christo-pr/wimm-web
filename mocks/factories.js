@@ -1,3 +1,7 @@
+import { Factory } from "miragejs"
+
+import utils from "../src/utils/"
+
 // Expense factory
 const expenseFactory = {
   description(id) {
@@ -19,10 +23,10 @@ const expenseFactory = {
   },
 
   date() {
-    return new Date()
+    return utils.randomDate()
   }
 }
 
 export default {
-  expenseFactory
+  expense: Factory.extend(expenseFactory)
 }

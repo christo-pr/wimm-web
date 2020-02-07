@@ -13,7 +13,7 @@ function Sidebar(props) {
   return (
     <div
       id={id}
-      data-uk-offcanvas="overlay: true"
+      data-uk-offcanvas="overlay: true; mode: push"
       className="sidebar"
       ref={offCanvas}
     >
