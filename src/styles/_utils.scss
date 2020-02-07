@@ -1,0 +1,9 @@
+/*
+* CSS Utilities
+*/
+
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -19,7 +19,7 @@ function init() {
 
     seeds(server) {
       // 10 expenses
-      server.createList("expense", 10)
+      server.createList("expense", 20)
 
       // seed the in-memory database
       server.db.dump()

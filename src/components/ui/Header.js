@@ -9,14 +9,11 @@ function Header() {
     <>
       <nav className="uk-navbar-container" data-uk-navbar>
         <div className="uk-navbar-left">
-          <ul className="uk-navbar-nav">
-            <li className="uk-active">
-              <a
-                data-uk-toggle={`target: #${sidebarID}`}
-                data-uk-icon="icon: menu; ratio: 2"
-              ></a>
-            </li>
-          </ul>
+          <a
+            className="uk-navbar-toggle"
+            data-uk-toggle={`target: #${sidebarID}`}
+            data-uk-navbar-toggle-icon
+          ></a>
         </div>
       </nav>
       <Sidebar id={sidebarID} />
