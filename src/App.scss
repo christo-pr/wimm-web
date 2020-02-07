@@ -4,6 +4,19 @@
 @import "./styles/variables";
 
 /*
+* Navbar
+*/
+nav {
+  box-shadow: 0 0 10px darken($gray_color, 20);
+  height: 50px;
+  margin-bottom: 20px;
+
+  a.uk-navbar-toggle {
+    min-height: 55px;
+  }
+}
+
+/*
 * Sidebar
 */
 .sidebar {
