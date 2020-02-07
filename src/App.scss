@@ -1,4 +1,7 @@
 @import "./styles/uikit";
+@import "./styles/reset";
+@import "./styles/utils";
+@import "./styles/variables";
 
 /*
 * Sidebar
@@ -7,4 +10,44 @@
   .sidebar-menu {
     padding-top: 20px;
   }
+}
+
+/*
+* Bottom bar
+*/
+.bottom-bar {
+  background-color: white;
+  border-top: 1px solid $gray_color;
+  bottom: 0;
+  height: $bottom_bar_height;
+  left: 0;
+  right: 0;
+
+  &:before {
+    border: 1px solid $gray_color;
+    content: "";
+    display: inline;
+    height: $bottom_bar_height;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  div {
+    text-align: center;
+    padding-top: 12px;
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+/*
+* Main container
+*/
+
+.main-container {
+  overflow: scroll;
 }
