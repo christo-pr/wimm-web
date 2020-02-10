@@ -75,6 +75,19 @@ nav {
 }
 
 /*
+* Category icon
+*/
+.category-icon {
+  text-align: center;
+
+  span {
+    padding: 5px;
+    border: 1px solid $gray_color;
+    border-radius: 50%;
+  }
+}
+
+/*
 * Main container
 */
 .main-container {

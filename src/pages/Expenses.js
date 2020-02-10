@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import api from "../utils/api"
 
-import { DateFilter } from "../components/"
+import { DateFilter, ExpenseItem } from "../components/"
 
 function Expenses() {
   const [expenses, setExpenses] = useState([])
@@ -24,9 +24,12 @@ function Expenses() {
         <DateFilter />
       </div>
       <hr />
-      <ul className="uk-list uk-list-divider">
+      <ul
+        className="uk-list uk-list-divider"
+        uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 500"
+      >
         {expenses.map(expense => (
-          <li key={expense.id}>{expense.id}</li>
+          <ExpenseItem key={expense.id} expense={expense} />
         ))}
       </ul>
     </>
