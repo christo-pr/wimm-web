@@ -2,13 +2,13 @@ import React from "react"
 import { Router } from "@reach/router"
 
 import "./App.scss"
-import { Header, BottomBar } from "./components/"
+import { Navbar, BottomBar } from "./components/"
 import { HomePage, ExpensesPage, PaymentsPage } from "./pages/"
 
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="uk-container main-container">
         <Router>
           <HomePage path="/" />

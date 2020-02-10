@@ -16,7 +16,10 @@ function Expenses() {
 
   return (
     <>
-      <div className="uk-flex uk-flex-column uk-flex-cente">
+      <div
+        className="uk-flex uk-flex-column uk-flex-center uk-background-default uk-padding-small uk-padding-remove-horizontal"
+        data-uk-sticky
+      >
         <button className="uk-button uk-button-primary">Agregar + </button>
         <DateFilter />
       </div>
