@@ -85,6 +85,12 @@ nav {
     border: 1px solid $gray_color;
     border-radius: 50%;
   }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    white-space: normal;
+  }
 }
 
 /*
@@ -92,4 +98,19 @@ nav {
 */
 .main-container {
   overflow: scroll;
+  padding-bottom: 20px;
+}
+
+/*
+* Expenses
+*/
+.sticky-add-button {
+  &.uk-active {
+    left: 0;
+    width: 100% !important;
+
+    button {
+      padding: 10px 0;
+    }
+  }
 }

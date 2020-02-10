@@ -1,7 +1,7 @@
 import React from "react"
 
 const ICONS = [
-  { name: "Carro", icon: "cart" },
+  { name: "Tienda", icon: "cart" },
   { name: "Casa", icon: "home" },
   { name: "Tarjeta", icon: "credit-card" },
   { name: "Telefono", icon: "receiver" },

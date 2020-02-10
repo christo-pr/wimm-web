@@ -1,35 +1,34 @@
 import React from "react"
 
 import Category from "./ui/Category"
+import utils from "../utils"
 
 function ExpenseItem(props) {
   const { expense } = props
 
   return (
-    <article className="uk-comment">
-      <header
-        className="uk-comment-header uk-grid-medium uk-flex-middle"
-        data-uk-grid
-      >
-        <div className="uk-width-auto">
+    <article className="">
+      <header className="uk-grid-medium uk-flex-start" data-uk-grid>
+        <div className="uk-width-1-4">
           <Category id={expense.category} />
         </div>
         <div className="uk-width-expand">
-          <h4 className="uk-comment-title uk-margin-remove">
-            <a className="uk-link-reset" href="#">
-              Author
-            </a>
-          </h4>
-          <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-            <li>
-              <a href="#">12 days ago</a>
-            </li>
-            <li>
-              <a href="#">{expense.id}</a>
-            </li>
-          </ul>
+          <h5 className="uk-comment-title uk-margin-remove">
+            {expense.description}
+          </h5>
         </div>
       </header>
+      <ul className="uk-subnav uk-subnav-divider uk-width-2-2 uk-margin-remove-top uk-flex uk-flex-around">
+        <li>
+          <p className="uk-margin-remove-bottom">
+            {utils.formatDate(new Date(expense.date))}
+          </p>
+        </li>
+        <li>
+          <p className="uk-margin-remove-bottom">${expense.amount}</p>
+        </li>
+      </ul>
+      <hr />
     </article>
   )
 }
