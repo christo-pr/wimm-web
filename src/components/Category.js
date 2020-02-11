@@ -18,7 +18,7 @@ function Category(props) {
   return (
     <div className="category-icon">
       <span data-uk-icon={icon}></span>
-      <p>{ICONS[id]}</p>
+      <p>{ICONS[icon]}</p>
     </div>
   )
 }
