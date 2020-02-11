@@ -24,7 +24,6 @@ function Expenses() {
         </div>
         <DateFilter />
       </div>
-      <hr />
       <ul
         className="uk-list uk-list-divider"
         uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 500"

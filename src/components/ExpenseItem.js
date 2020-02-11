@@ -7,7 +7,7 @@ function ExpenseItem(props) {
   const { expense } = props
 
   return (
-    <article className="">
+    <article className="expense-item">
       <header className="uk-grid-medium uk-flex-start" data-uk-grid>
         <div className="uk-width-1-4">
           <Category id={expense.category} />
@@ -18,7 +18,7 @@ function ExpenseItem(props) {
           </h5>
         </div>
       </header>
-      <ul className="uk-subnav uk-subnav-divider uk-width-2-2 uk-margin-remove-top uk-flex uk-flex-around">
+      <ul className="uk-subnav uk-subnav-divider uk-margin-remove-top uk-flex uk-flex-around">
         <li>
           <p className="uk-margin-remove-bottom">
             {utils.formatDate(new Date(expense.date))}
