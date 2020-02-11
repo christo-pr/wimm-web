@@ -9,6 +9,17 @@ function randomDate(start = new Date(2020, 0, 1), end = new Date()) {
   )
 }
 
+function formatDate(date) {
+  const event = new Date(date)
+
+  return event.toLocaleDateString("es-MX", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  })
+}
+
 export default {
-  randomDate
+  randomDate,
+  formatDate
 }

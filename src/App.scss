@@ -1,4 +1,4 @@
-@import "./styles/uikit";
+@import "./styles/vendor";
 @import "./styles/reset";
 @import "./styles/utils";
 @import "./styles/variables";
@@ -58,10 +58,71 @@ nav {
 }
 
 /*
+* DateFilter
+*/
+.date-filter {
+  span {
+    padding-top: 4px;
+  }
+
+  div.react-datepicker__input-container {
+    border: 1px solid $gray_color;
+    border-radius: 10px;
+    input[type="text"] {
+      text-align: center;
+    }
+  }
+}
+
+/*
+* Category icon
+*/
+.category-icon {
+  text-align: center;
+
+  span {
+    padding: 5px;
+    border: 1px solid $gray_color;
+    border-radius: 50%;
+  }
+
+  p {
+    margin: 0;
+    font-size: 10px;
+    white-space: normal;
+  }
+}
+
+/*
 * Main container
 */
-
 .main-container {
-  max-height: 80vh;
   overflow: scroll;
+  padding-bottom: 20px;
+}
+
+/*
+* Expenses
+*/
+.sticky-add-button {
+  &.uk-active {
+    left: 0;
+    width: 100% !important;
+
+    button {
+      padding: 10px 0;
+    }
+  }
+}
+
+.expense-item {
+  ul {
+    position: relative;
+    bottom: 15px;
+    left: 12px;
+  }
+
+  hr {
+    margin-top: 10px;
+  }
 }

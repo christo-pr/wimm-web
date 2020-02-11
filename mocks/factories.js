@@ -9,7 +9,15 @@ const expenseFactory = {
   },
 
   category() {
-    const categories = ["food", "car", "store", "house", "other"]
+    const categories = [
+      "cart",
+      "home",
+      "credit-card",
+      "receiver",
+      "world",
+      "bolt",
+      "question"
+    ]
     const randomIndex = Math.floor(Math.random() * categories.length)
 
     return categories[randomIndex]
