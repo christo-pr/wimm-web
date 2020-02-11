@@ -1,6 +1,6 @@
 import React from "react"
 
-import Category from "./ui/Category"
+import Category from "./Category"
 import utils from "../utils"
 
 function ExpenseItem(props) {
