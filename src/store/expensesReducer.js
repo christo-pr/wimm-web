@@ -1,7 +1,8 @@
 export const initialState = {
   expenses: [],
+  totalExpense: 0,
   loading: false,
-  error: null
+  error: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +11,12 @@ const reducer = (state = initialState, action) => {
       return { ...state, loading: true }
 
     case "success":
-      return { ...state, expenses: action.expenses, loading: false }
+      return {
+        ...state,
+        expenses: action.expenses,
+        totalExpense: action.expenses.reduce((acc, v) => acc + v.amount, 0),
+        loading: false,
+      }
 
     case "error":
       return { ...state, error: action.error }
