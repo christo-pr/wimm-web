@@ -1,6 +1,6 @@
 import React from "react"
 
-import { DateFilter, ExpenseItem } from "../components/"
+import { DateFilter, ExpenseItem, Money } from "../components/"
 import { ExpensesContainer } from "../containers/"
 
 function Expenses() {
@@ -21,7 +21,8 @@ function Expenses() {
             className="uk-tile uk-tile-default uk-padding-small uk-text-center"
           >
             <p className="uk-h4">
-              <small>Total gastado:</small> <br />${totalExpense}
+              <small>Total gastado:</small> <br />
+              <Money amount={totalExpense} />
             </p>
           </div>
           <ul
