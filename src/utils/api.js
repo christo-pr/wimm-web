@@ -4,8 +4,10 @@
  */
 
 const api = {
-  getExpenses() {
-    return fetch("/api/expenses").then(res => res.json())
+  expenses: {
+    get() {
+      return fetch("/api/expenses").then(res => res.json())
+    }
   }
 }
 
