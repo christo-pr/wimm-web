@@ -119,9 +119,22 @@ nav {
     position: relative;
     bottom: 15px;
     left: 12px;
+
+    li {
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+    }
   }
 
   hr {
     margin-top: 10px;
+  }
+}
+
+.expenses-total {
+  &.uk-active {
+    left: 0;
+    width: 100% !important;
   }
 }

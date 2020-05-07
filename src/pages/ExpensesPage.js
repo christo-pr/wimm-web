@@ -18,13 +18,14 @@ function Expenses() {
           </div>
           <div
             data-uk-sticky="offset: 60"
-            className="uk-tile uk-tile-default uk-padding-small uk-text-center"
+            className="uk-tile uk-tile-default uk-padding-small uk-text-center expenses-total"
           >
             <p className="uk-h4">
               <small>Total gastado:</small> <br />
               <Money amount={totalExpense} />
             </p>
           </div>
+          <hr className="uk-divider-small uk-text-center"></hr>
           <ul
             className="uk-list uk-list-divider"
             uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 500"
