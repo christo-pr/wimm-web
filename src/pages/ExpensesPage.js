@@ -1,13 +1,14 @@
 import React from "react"
 
-import { DateFilter, ExpenseItem, Money } from "../components/"
+import { DateFilter, ExpenseItem, ExpenseForm, Money } from "../components/"
 import { ExpensesContainer } from "../containers/"
 
 function Expenses() {
   return (
     <ExpensesContainer>
-      {({ expenses, totalExpense, loading, error }) => (
+      {({ expenses, loading, error }) => (
         <>
+          <ExpenseForm />
           <div className="uk-flex uk-flex-column uk-flex-center uk-background-default">
             <div data-uk-sticky className="sticky-add-button">
               <button className="uk-button uk-button-primary uk-width-expand">
@@ -22,7 +23,7 @@ function Expenses() {
           >
             <p className="uk-h4">
               <small>Total gastado:</small> <br />
-              <Money amount={totalExpense} />
+              <Money amount={expenses.reduce((acc, v) => acc + v.amount, 0)} />
             </p>
           </div>
           <hr className="uk-divider-small uk-text-center"></hr>
