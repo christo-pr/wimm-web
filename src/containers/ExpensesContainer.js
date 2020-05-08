@@ -10,8 +10,6 @@ function ExpensesContainer(props) {
     get()
   }, [])
 
-  if (!data) return null
-
   return children(data)
 }
 
