@@ -22,7 +22,7 @@ function ExpenseItem(props) {
       <ul className="uk-subnav uk-subnav-divider uk-margin-remove-top uk-flex uk-flex-around">
         <li>
           <p className="uk-margin-remove-bottom">
-            {utils.formatDate(new Date(expense.date))}
+            {utils.formatDate(expense.date)}
           </p>
         </li>
         <li>

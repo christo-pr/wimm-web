@@ -103,15 +103,11 @@ nav {
 /*
 * Expenses
 */
-.sticky-add-button {
-  &.uk-active {
-    left: 0;
-    width: 100% !important;
-
-    button {
-      padding: 10px 0;
-    }
-  }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 .expense-item {
@@ -129,6 +125,21 @@ nav {
 
   hr {
     margin-top: 10px;
+  }
+}
+
+.expenses-form {
+  .placeholder-center {
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  .input-focused {
+    display: block;
+  }
+  .input-blur {
+    display: none;
   }
 }
 
