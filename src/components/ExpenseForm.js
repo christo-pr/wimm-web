@@ -32,14 +32,17 @@ function ExpenseForm(props) {
   ))
 
   useEffect(() => {
-    const valid = quantity.trim().replace(/ /g, "") !== ""
+    const valid = quantity > 0
 
     setValid(valid)
   }, [quantity])
 
   const submitForm = useCallback(async () => {
-    post({ quantity, date, category })
-  }, [])
+    // post({ quantity, date, category })
+    console.log("submitForm -> quantity", quantity)
+    console.log("submitForm -> date", date)
+    console.log("submitForm -> category", category)
+  }, [quantity, date, category])
 
   return (
     <div>
@@ -50,16 +53,19 @@ function ExpenseForm(props) {
               selectedCategory={category}
               onSelectCategory={setCategory}
             />
-            <input
-              className="uk-input uk-form-small placeholder-center uk-margin-left"
-              type="text"
-              pattern="[0-9]*"
-              inputMode="numeric"
-              value={quantity}
-              onFocus={() => setFocus(true)}
-              onChange={(e) => setQuantity(e.target.value)}
-              placeholder="$$ Cantidad $$"
-            />
+            <div className="uk-relative">
+              <span className="currency">MX $</span>
+              <input
+                className="uk-input uk-form-small"
+                type="text"
+                pattern="[0-9]*"
+                inputMode="numeric"
+                placeholder="0.00"
+                value={quantity}
+                onFocus={() => setFocus(true)}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
+            </div>
           </div>
 
           <div
@@ -78,7 +84,8 @@ function ExpenseForm(props) {
         </div>
         <div className={isValid ? "show" : "hide"}>
           <button
-            type="submit"
+            type="button"
+            onClick={submitForm}
             className="uk-button uk-button-success uk-width-expand"
           >
             Agregar +

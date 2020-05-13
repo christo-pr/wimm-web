@@ -80,6 +80,7 @@ nav {
 .category-icon {
   text-align: center;
   transition: 0.3s;
+  margin-right: 1rem;
 
   &.selected {
     > span {
@@ -152,6 +153,20 @@ nav {
   }
   .input-blur {
     display: none;
+  }
+
+  /*
+  * Money mask input
+  */
+  .currency {
+    font-size: 13px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    + input {
+      padding-left: 37px !important;
+    }
   }
 }
 
