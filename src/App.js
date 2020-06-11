@@ -2,7 +2,7 @@ import React from "react"
 import { Router } from "@reach/router"
 
 import "./App.scss"
-import { Navbar, BottomBar } from "./components/"
+import { Navbar } from "./components/"
 import { HomePage, ExpensesPage, PaymentsPage } from "./pages/"
 
 function App() {
@@ -16,7 +16,6 @@ function App() {
           <PaymentsPage path="payments" />
         </Router>
       </div>
-      <BottomBar />
     </>
   )
 }

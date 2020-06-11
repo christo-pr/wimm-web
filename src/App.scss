@@ -79,6 +79,19 @@ nav {
 */
 .category-icon {
   text-align: center;
+  transition: 0.3s;
+  margin-right: 1rem;
+
+  &.selected {
+    > span {
+      border-color: $black;
+      color: $black;
+
+      + p {
+        color: $black;
+      }
+    }
+  }
 
   span {
     padding: 5px;
@@ -104,15 +117,11 @@ nav {
 /*
 * Expenses
 */
-.sticky-add-button {
-  &.uk-active {
-    left: 0;
-    width: 100% !important;
-
-    button {
-      padding: 10px 0;
-    }
-  }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
 
 .expense-item {
@@ -120,9 +129,51 @@ nav {
     position: relative;
     bottom: 15px;
     left: 12px;
+
+    li {
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+    }
   }
 
   hr {
     margin-top: 10px;
+  }
+}
+
+.expenses-form {
+  .placeholder-center {
+    &::-webkit-input-placeholder {
+      text-align: center;
+    }
+  }
+
+  .input-focused {
+    display: block;
+  }
+  .input-blur {
+    display: none;
+  }
+
+  /*
+  * Money mask input
+  */
+  .currency {
+    font-size: 13px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    + input {
+      padding-left: 37px !important;
+    }
+  }
+}
+
+.expenses-total {
+  &.uk-active {
+    left: 0;
+    width: 100% !important;
   }
 }

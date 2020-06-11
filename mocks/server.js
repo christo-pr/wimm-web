@@ -14,10 +14,13 @@ function init() {
     routes() {
       this.namespace = "api"
 
-      // Expenses
+      // GET Expenses
       this.get("/expenses")
       // Payments
       this.get("/payments")
+
+      // POST Expenses
+      this.post("/expenses")
     },
 
     seeds(server) {
@@ -29,7 +32,7 @@ function init() {
 
       // seed the in-memory database
       server.db.dump()
-    }
+    },
   })
 }
 

@@ -3,25 +3,54 @@ import { useReducer, useCallback } from "react"
 import expensesReducer, { initialState } from "../store/expensesReducer"
 import api from "../utils/api"
 
-const useApi = () => {
-  const [state, dispatch] = useReducer(expensesReducer, initialState)
+const REDUCERS = {
+  expenses: {
+    reducer: expensesReducer,
+    state: initialState,
+    actions: {
+      loading: () => ({ type: "loading" }),
+      postSucess: () => ({ type: "success" }),
+      getSuccess: (response) => ({
+        type: "success",
+        expenses: response.expenses,
+      }),
+      error: (error) => ({ type: "error", expenses: [], error: error }),
+    },
+  },
+}
 
-  // action creators
-  const loading = () => ({ type: "loading" })
-  const success = response => ({ type: "success", expenses: response })
-  const error = error => ({ type: "error", expenses: [], error: error })
+const useApi = (reducerType) => {
+  const [state, dispatch] = useReducer(
+    REDUCERS[reducerType].reducer,
+    REDUCERS[reducerType].state
+  )
+  const actions = REDUCERS[reducerType].actions
 
-  const request = useCallback(async () => {
-    dispatch(loading())
+  const post = useCallback(async (body) => {
+    dispatch(actions.loading())
     try {
-      const res = await api.expenses.get()
-      dispatch(success(res.expenses))
+      const res = await api[reducerType].post(body)
+      dispatch(actions.postSucess(res))
     } catch (err) {
-      dispatch(error(errr))
+      dispatch(actions.error(err))
     }
   }, [])
 
-  return [state, request]
+  const get = useCallback(async () => {
+    dispatch(actions.loading())
+    try {
+      const res = await api[reducerType].get()
+      dispatch(actions.getSuccess(res))
+    } catch (err) {
+      dispatch(actions.error(err))
+    }
+  }, [])
+
+  return {
+    data: state,
+    post,
+    get,
+  }
 }
 
 export default useApi
