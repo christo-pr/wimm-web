@@ -4,13 +4,13 @@ import { useApi } from "../hooks/"
 
 function ExpensesContainer(props) {
   const { children } = props
-  const [state, request] = useApi()
+  const { data, get } = useApi("expenses")
 
   useEffect(() => {
-    request()
+    get()
   }, [])
 
-  return children(state)
+  return children(data)
 }
 
 export default ExpensesContainer

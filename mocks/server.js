@@ -5,7 +5,7 @@ import factories from "./factories"
 function init() {
   new Server({
     models: {
-      expense: Model
+      expense: Model,
     },
 
     factories: factories,
@@ -13,8 +13,11 @@ function init() {
     routes() {
       this.namespace = "api"
 
-      // Expenses
+      // GET Expenses
       this.get("/expenses")
+
+      // POST Expenses
+      this.post("/expenses")
     },
 
     seeds(server) {
@@ -23,7 +26,7 @@ function init() {
 
       // seed the in-memory database
       server.db.dump()
-    }
+    },
   })
 }
 
