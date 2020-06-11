@@ -5,7 +5,8 @@ import factories from "./factories"
 function init() {
   new Server({
     models: {
-      expense: Model
+      expense: Model,
+      payment: Model
     },
 
     factories: factories,
@@ -15,11 +16,16 @@ function init() {
 
       // Expenses
       this.get("/expenses")
+      // Payments
+      this.get("/payments")
     },
 
     seeds(server) {
       // 10 expenses
       server.createList("expense", 20)
+
+      // payments
+      server.createList("payment", 20)
 
       // seed the in-memory database
       server.db.dump()

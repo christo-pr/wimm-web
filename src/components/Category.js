@@ -7,6 +7,7 @@ const ICONS = {
   receiver: "Telefono",
   world: "Viajes (Gasolina)",
   bolt: "Gasto relampago",
+  invoice: "Factura",
   question: "Otra"
 }
 

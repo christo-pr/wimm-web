@@ -3824,9 +3824,10 @@ range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
 
-react-datepicker@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-2.12.0.tgz#7c3898ff7a1ba0f32d3306ac68a908b825c09a1d"
+react-datepicker@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-2.14.0.tgz#cdb2f236f120a7e6e973b617f71358b5c8617aac"
+  integrity sha512-9TUDNj0zoeQT3ey6i7Dv4NLcqONyYqXNEOLA3++HwQKR5NK4eRoG4QaohM/5XmWw2tDpJWpl3ByCWP4kWQtqgQ==
   dependencies:
     classnames "^2.2.6"
     date-fns "^2.0.1"
