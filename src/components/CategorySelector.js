@@ -36,7 +36,7 @@ function CategorySelector(props) {
   return (
     <>
       <div
-        className="category-icon"
+        className="button-circle-icon"
         ref={modalButtonRef}
         data-uk-toggle={`target: #${categorySelectorId}`}
       >
