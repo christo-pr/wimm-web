@@ -7,7 +7,7 @@ function PaycheckTrackerPage() {
     <div className="uk-flex uk-flex-around uk-flex-middle uk-background-default">
       <div className="paycheck-amount uk-text-center uk-padding-small">
         <PaycheckForm
-          label="Total ahorro:"
+          label="Total Mes:"
           amount={150}
           onChangeAmount={(amount) => {
             console.log("new ahorro", amount)
@@ -15,13 +15,7 @@ function PaycheckTrackerPage() {
         />
       </div>
       <div className="paycheck-amount uk-text-center uk-padding-small">
-        <PaycheckForm
-          label="Total mes:"
-          amount={150}
-          onChangeAmount={(amount) => {
-            console.log("new mes", amount)
-          }}
-        />
+        <PaycheckForm label="Total Ahorro:" amount={150} editable={false} />
       </div>
     </div>
   )

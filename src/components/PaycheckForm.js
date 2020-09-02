@@ -34,22 +34,22 @@ function PaycheckForm(props) {
             />
           </form>
         )}
-        {editable && (
-          <button
-            className="button-circle-icon"
-            type={!editMode ? "button" : "submit"}
-            onClick={() => {
-              if (editMode) {
-                onChangeAmount(newAmount)
-                setEditMode(false)
-              } else {
-                setEditMode(true)
-              }
-            }}
-          >
-            <span data-uk-icon={editMode ? "check" : "pencil"}></span>
-          </button>
-        )}
+
+        <button
+          className="button-circle-icon"
+          type={!editMode ? "button" : "submit"}
+          onClick={() => {
+            if (editMode) {
+              onChangeAmount(newAmount)
+              setEditMode(false)
+            } else {
+              setEditMode(true)
+            }
+          }}
+          disabled={!editable}
+        >
+          <span data-uk-icon={editMode ? "check" : "pencil"}></span>
+        </button>
       </div>
     </div>
   )
