@@ -1,6 +1,6 @@
 import React from "react"
 
-import { PaycheckAmount } from "../components"
+import { PaycheckAmount, PaycheckForm } from "../components"
 
 function PaycheckTrackerPage() {
   return (
@@ -19,14 +19,7 @@ function PaycheckTrackerPage() {
           <PaycheckAmount label="Total Ahorro:" amount={150} editable={false} />
         </div>
       </div>
-      <div data-uk-sticky className="paycheck-add-btn">
-        <button
-          type="button"
-          className="uk-button uk-button-success uk-width-expand"
-        >
-          Agregar +
-        </button>
-      </div>
+      <PaycheckForm />
       <hr className="uk-divider-small uk-text-center"></hr>
       <ul
         className="uk-list uk-list-divider"
