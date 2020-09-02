@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Money from "./Money"
 
-function PaycheckForm(props) {
+function PaycheckAmount(props) {
   const { label, amount, onChangeAmount, editable = true } = props
   const [editMode, setEditMode] = useState(false)
   const [newAmount, setNewAmount] = useState(amount)
@@ -55,4 +55,4 @@ function PaycheckForm(props) {
   )
 }
 
-export default PaycheckForm
+export default PaycheckAmount

@@ -1,13 +1,13 @@
 import React from "react"
 
-import { PaycheckForm } from "../components"
+import { PaycheckAmount } from "../components"
 
 function PaycheckTrackerPage() {
   return (
     <>
       <div className="uk-flex uk-flex-around uk-flex-middle uk-background-default">
         <div className="paycheck-amount uk-text-center uk-padding-small">
-          <PaycheckForm
+          <PaycheckAmount
             label="Total Mes:"
             amount={150}
             onChangeAmount={(amount) => {
@@ -16,7 +16,7 @@ function PaycheckTrackerPage() {
           />
         </div>
         <div className="paycheck-amount uk-text-center uk-padding-small">
-          <PaycheckForm label="Total Ahorro:" amount={150} editable={false} />
+          <PaycheckAmount label="Total Ahorro:" amount={150} editable={false} />
         </div>
       </div>
       <div data-uk-sticky className="paycheck-add-btn">
