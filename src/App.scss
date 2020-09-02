@@ -199,3 +199,9 @@ nav {
     }
   }
 }
+.paycheck-add-btn {
+  &.uk-active {
+    width: 100% !important;
+    left: 0;
+  }
+}
