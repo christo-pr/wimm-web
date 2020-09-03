@@ -35,6 +35,34 @@ const expenseFactory = {
   }
 }
 
+const PaymentFactory = {
+  description(id) {
+    return `pago ${id}`
+  },
+
+  category() {
+    const categories = [
+      "credit-card",
+      "invoice"
+    ]
+    const randomIndex = Math.floor(Math.random() * categories.length)
+
+    return categories[randomIndex]
+  },
+  amount() {
+    let min = 1000
+    let max = 10000
+
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  },
+
+  date() {
+    return utils.randomDate()
+  }
+
+}
+
 export default {
-  expense: Factory.extend(expenseFactory)
+  expense: Factory.extend(expenseFactory),
+  payment: Factory.extend(PaymentFactory)
 }

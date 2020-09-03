@@ -9,7 +9,8 @@ const ICONS = {
   receiver: "Telefono",
   world: "Viajes (Gasolina)",
   bolt: "Gasto relampago",
-  question: "Otra",
+  invoice: "Factura",
+  question: "Otra"
 }
 
 function Category(props) {
