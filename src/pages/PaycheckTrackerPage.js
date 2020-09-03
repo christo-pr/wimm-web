@@ -1,6 +1,6 @@
 import React from "react"
 
-import { PaycheckAmount, PaycheckForm } from "../components"
+import { PaycheckAmount, PaycheckForm, PaycheckItem } from "../components"
 
 function PaycheckTrackerPage() {
   return (
@@ -8,7 +8,7 @@ function PaycheckTrackerPage() {
       <div className="uk-flex uk-flex-around uk-flex-middle uk-background-default">
         <div className="paycheck-amount uk-text-center uk-padding-small">
           <PaycheckAmount
-            label="Total Mes:"
+            label="Mensual"
             amount={150}
             onChangeAmount={(amount) => {
               console.log("new ahorro", amount)
@@ -16,35 +16,18 @@ function PaycheckTrackerPage() {
           />
         </div>
         <div className="paycheck-amount uk-text-center uk-padding-small">
-          <PaycheckAmount label="Total Ahorro:" amount={150} editable={false} />
+          <PaycheckAmount label="Quincenal:" amount={150} editable={false} />
         </div>
       </div>
       <PaycheckForm />
-      <hr className="uk-divider-small uk-text-center"></hr>
-      <ul
-        className="uk-list uk-list-divider"
+      <dl
+        className="uk-description-list uk-description-list-divider uk-margin-large-top"
         data-uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 100"
       >
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-        <li>testing</li>
-      </ul>
+        {new Array(10).fill().map((_, i) => (
+          <PaycheckItem key={i} />
+        ))}
+      </dl>
     </>
   )
 }

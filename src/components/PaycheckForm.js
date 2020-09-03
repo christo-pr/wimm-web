@@ -16,7 +16,7 @@ function PaycheckForm(props) {
         <div className="uk-modal-dialog uk-modal-body">
           <form>
             <fieldset className="uk-fieldset">
-              <legend class="uk-legend">Nuevo gasto</legend>
+              <legend className="uk-legend">Nuevo gasto</legend>
             </fieldset>
             <div className="uk-margin">
               <input
