@@ -1,7 +1,5 @@
 import React from "react"
 
-import CategorySelector from "./CategorySelector"
-
 const ICONS = {
   cart: "Tienda",
   home: "Casa",
@@ -12,7 +10,7 @@ const ICONS = {
   question: "Otra",
 }
 
-function Category(props) {
+export function Category(props) {
   const { id, selected } = props
   const icon = ICONS[id] ? id : "question"
 
@@ -25,5 +23,3 @@ function Category(props) {
     </>
   )
 }
-
-export default Category

@@ -1,4 +1,4 @@
-export default function Money(props) {
+export function Money(props) {
   const { amount } = props
 
   return amount.toLocaleString(undefined, {

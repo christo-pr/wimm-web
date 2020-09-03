@@ -1,10 +1,10 @@
 import React from "react"
 
-import Category from "./Category"
-import Money from "./Money"
+import { Category } from "./Category"
+import { Money } from "./Money"
 import utils from "../utils"
 
-function ExpenseItem(props) {
+export function ExpenseItem(props) {
   const { expense } = props
 
   return (
@@ -35,5 +35,3 @@ function ExpenseItem(props) {
     </article>
   )
 }
-
-export default ExpenseItem
