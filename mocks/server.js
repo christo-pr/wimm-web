@@ -6,6 +6,7 @@ function init() {
   new Server({
     models: {
       expense: Model,
+      payment: Model
     },
 
     factories: factories,
@@ -15,6 +16,8 @@ function init() {
 
       // GET Expenses
       this.get("/expenses")
+      // Payments
+      this.get("/payments")
 
       // POST Expenses
       this.post("/expenses")
@@ -23,6 +26,9 @@ function init() {
     seeds(server) {
       // 10 expenses
       server.createList("expense", 20)
+
+      // payments
+      server.createList("payment", 20)
 
       // seed the in-memory database
       server.db.dump()

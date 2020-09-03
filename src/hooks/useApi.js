@@ -1,6 +1,7 @@
 import { useReducer, useCallback } from "react"
 
 import expensesReducer, { initialState } from "../store/expensesReducer"
+import paymentsReducer, { initialPaymentsState } from "../store/paymentsReducer"
 import api from "../utils/api"
 
 const REDUCERS = {
@@ -15,6 +16,19 @@ const REDUCERS = {
         expenses: response.expenses,
       }),
       error: (error) => ({ type: "error", expenses: [], error: error }),
+    },
+  },
+  payments: {
+    reducer: expensesReducer,
+    state: initialPaymentsState,
+    actions: {
+      loading: () => ({ type: "loading" }),
+      postSucess: () => ({ type: "success" }),
+      getSuccess: (response) => ({
+        type: "success",
+        payments: response.payments,
+      }),
+      error: (error) => ({ type: "error", payments: [], error: error }),
     },
   },
 }
