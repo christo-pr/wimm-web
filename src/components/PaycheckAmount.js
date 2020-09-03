@@ -8,7 +8,7 @@ function PaycheckAmount(props) {
   const [newAmount, setNewAmount] = useState(amount)
 
   return (
-    <div className="paycheck-amount uk-text-center uk-padding-small">
+    <div className="paycheck-amount uk-text-center uk-padding-small uk-padding-remove-bottom">
       <small>{label}</small>
       <div className="uk-margin-small">
         {!editMode && (
@@ -26,6 +26,7 @@ function PaycheckAmount(props) {
           >
             <input
               type="number"
+              className="uk-input"
               value={newAmount}
               step="0.50"
               min="0"
@@ -35,21 +36,22 @@ function PaycheckAmount(props) {
           </form>
         )}
 
-        <button
-          className="button-circle-icon"
-          type={!editMode ? "button" : "submit"}
-          onClick={() => {
-            if (editMode) {
-              onChangeAmount(newAmount)
-              setEditMode(false)
-            } else {
-              setEditMode(true)
-            }
-          }}
-          disabled={!editable}
-        >
-          <span data-uk-icon={editMode ? "check" : "pencil"}></span>
-        </button>
+        {editable && (
+          <button
+            className="button-circle-icon"
+            type={!editMode ? "button" : "submit"}
+            onClick={() => {
+              if (editMode) {
+                onChangeAmount(newAmount)
+                setEditMode(false)
+              } else {
+                setEditMode(true)
+              }
+            }}
+          >
+            <span data-uk-icon={editMode ? "check" : "pencil"}></span>
+          </button>
+        )}
       </div>
     </div>
   )
