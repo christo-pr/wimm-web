@@ -12,9 +12,9 @@ function PaycheckAmount(props) {
       <small>{label}</small>
       <div className="uk-margin-small">
         {!editMode && (
-          <h4>
+          <h5>
             <Money amount={amount} />
-          </h4>
+          </h5>
         )}
         {editMode && (
           <form
