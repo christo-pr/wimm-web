@@ -17,7 +17,7 @@ export function Category(props) {
 
   return (
     <>
-      <div className={`category-icon ${selected && "selected"}`}>
+      <div className={`button-circle-icon ${selected && "selected"}`}>
         <span data-uk-icon={icon}></span>
         <p>{ICONS[icon]}</p>
       </div>

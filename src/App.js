@@ -3,7 +3,12 @@ import { Router } from "@reach/router"
 
 import "./App.scss"
 import { Navbar } from "./components/"
-import { HomePage, ExpensesPage, PaymentsPage } from "./pages/"
+import {
+  HomePage,
+  ExpensesPage,
+  PaymentsPage,
+  PaycheckTrackerPage,
+} from "./pages/"
 
 function App() {
   return (
@@ -14,6 +19,7 @@ function App() {
           <HomePage path="/" />
           <ExpensesPage path="expenses" />
           <PaymentsPage path="payments" />
+          <PaycheckTrackerPage path="paycheck-tracker" />
         </Router>
       </div>
     </>

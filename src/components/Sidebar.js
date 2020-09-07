@@ -52,6 +52,15 @@ export function Sidebar(props) {
               Pagos
             </Link>
           </li>
+          <li className="uk-margin-top">
+            <Link to="/paycheck-tracker" onClick={closeSidebar}>
+              <span
+                data-uk-icon="calendar"
+                className="uk-margin-small-right"
+              ></span>
+              Mi quincena
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
