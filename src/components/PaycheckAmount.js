@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-import Money from "./Money"
+import { Money } from "./Money"
 
-function PaycheckAmount(props) {
+export function PaycheckAmount(props) {
   const { label, amount, onChangeAmount, editable = true } = props
   const [editMode, setEditMode] = useState(false)
   const [newAmount, setNewAmount] = useState(amount)
@@ -56,5 +56,3 @@ function PaycheckAmount(props) {
     </div>
   )
 }
-
-export default PaycheckAmount

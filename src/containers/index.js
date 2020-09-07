@@ -1,2 +1,2 @@
-export { default as ExpensesContainer } from "./ExpensesContainer"
-export { default as PaymentsContainer } from "./PaymentsContainer"
+export * from "./ExpensesContainer"
+export * from "./PaymentsContainer"

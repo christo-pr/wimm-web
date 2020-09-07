@@ -1,6 +1,6 @@
 import React from "react"
 
-function BottomBar() {
+export function BottomBar() {
   return (
     <div className="bottom-bar uk-position-fixed clickable uk-box-shadow-medium uk-column-1-2">
       <div>
@@ -16,5 +16,3 @@ function BottomBar() {
     </div>
   )
 }
-
-export default BottomBar

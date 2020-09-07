@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
 import { useApi } from "../hooks/"
 
-function PaymentsContainer(props) {
+export function PaymentsContainer(props) {
   const { children } = props
   const { data, get } = useApi("payments")
 
@@ -12,5 +12,3 @@ function PaymentsContainer(props) {
 
   return children(data)
 }
-
-export default PaymentsContainer

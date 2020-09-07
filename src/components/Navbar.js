@@ -1,10 +1,10 @@
 import React from "react"
 
-import Sidebar from "./Sidebar"
+import { Sidebar } from "./Sidebar"
 
 const sidebarID = "offcanvas-overlay"
 
-function Navbar() {
+export function Navbar() {
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
@@ -20,5 +20,3 @@ function Navbar() {
     </div>
   )
 }
-
-export default Navbar

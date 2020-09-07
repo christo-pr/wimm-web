@@ -1,6 +1,6 @@
 import React from "react"
 
-function PaycheckForm(props) {
+export function PaycheckForm(props) {
   return (
     <>
       <div data-uk-sticky className="paycheck-add-btn">
@@ -44,5 +44,3 @@ function PaycheckForm(props) {
     </>
   )
 }
-
-export default PaycheckForm

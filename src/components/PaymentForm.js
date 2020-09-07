@@ -2,7 +2,7 @@ import React, { useState, useEffect, forwardRef, useCallback } from "react"
 import DatePicker from "react-datepicker"
 
 import { useApi } from "../hooks/"
-import CategorySelector from "./CategorySelector"
+import { CategorySelector } from "./CategorySelector"
 
 import utils from "../utils"
 
@@ -16,7 +16,7 @@ const CATEGORIES = [
   "question",
 ]
 
-function PaymentForm(props) {
+export function PaymentForm(props) {
   const { isInline } = props
   const [institution, setInstitution] = useState("")
   const [quantity, setQuantity] = useState("")
@@ -33,7 +33,7 @@ function PaymentForm(props) {
   ))
 
   useEffect(() => {
-    const valid = (institution != "" && quantity > 0)
+    const valid = institution != "" && quantity > 0
 
     setValid(valid)
   }, [quantity])
@@ -45,7 +45,6 @@ function PaymentForm(props) {
     console.log("submitForm -> category", category)
   }, [quantity, date, category])
 
-
   return (
     <div>
       <form className="expenses-form">
@@ -56,11 +55,11 @@ function PaymentForm(props) {
           />
           <div className="uk-margin-small uk-flex uk-flex-middle uk-flex-around">
             <span>Institución: </span>
-              <input
-                className="uk-input uk-form-small"
-                type="text"
-                onChange={(e) => setInstitution(e.target.value)}
-              />
+            <input
+              className="uk-input uk-form-small"
+              type="text"
+              onChange={(e) => setInstitution(e.target.value)}
+            />
           </div>
           <div className="uk-margin-small uk-flex uk-flex-middle">
             <span>Pago del mes: </span>
@@ -93,13 +92,10 @@ function PaymentForm(props) {
                 onChange={(e) => setMinQuantity(e.target.value)}
               />
             </div>
-
           </div>
           <div className="uk-margin-samll uk-flex uk-flex-middle">
             <span>Fecha limite de pago: </span>
-            <div
-              className={`${isFocused ? "input-focused" : "input-blur"}`}
-            >
+            <div className={`${isFocused ? "input-focused" : "input-blur"}`}>
               <DatePicker
                 selected={date}
                 onChange={(d) => setDate(d)}
@@ -110,7 +106,9 @@ function PaymentForm(props) {
             </div>
           </div>
         </div>
-        <div className={isValid ? "show uk-flex-center uk-margin-small" : "hide"}>
+        <div
+          className={isValid ? "show uk-flex-center uk-margin-small" : "hide"}
+        >
           <button
             type="button"
             onClick={submitForm}
@@ -123,5 +121,3 @@ function PaymentForm(props) {
     </div>
   )
 }
-
-export default PaymentForm

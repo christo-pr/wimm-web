@@ -3,7 +3,7 @@ import React from "react"
 import Category from "./Category"
 import utils from "../utils"
 
-function PaymentItem(props) {
+export function PaymentItem(props) {
   const { payment } = props
 
   return (
@@ -32,5 +32,3 @@ function PaymentItem(props) {
     </article>
   )
 }
-
-export default PaymentItem

@@ -2,7 +2,7 @@ import React from "react"
 
 import { PaycheckAmount, PaycheckForm, PaycheckItem } from "../components"
 
-function PaycheckTrackerPage() {
+export function PaycheckTrackerPage() {
   return (
     <>
       <div className="paycheck-amount uk-text-center uk-position-relative">
@@ -35,5 +35,3 @@ function PaycheckTrackerPage() {
     </>
   )
 }
-
-export default PaycheckTrackerPage

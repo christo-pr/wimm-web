@@ -2,7 +2,7 @@ import React, { useState, useEffect, forwardRef, useCallback } from "react"
 import DatePicker from "react-datepicker"
 
 import { useApi } from "../hooks/"
-import CategorySelector from "./CategorySelector"
+import { CategorySelector } from "./CategorySelector"
 
 import utils from "../utils"
 
@@ -16,7 +16,7 @@ const CATEGORIES = [
   "question",
 ]
 
-function ExpenseForm(props) {
+export function ExpenseForm(props) {
   const { isInline } = props
   const [quantity, setQuantity] = useState("")
   const [date, setDate] = useState(new Date())
@@ -95,5 +95,3 @@ function ExpenseForm(props) {
     </div>
   )
 }
-
-export default ExpenseForm

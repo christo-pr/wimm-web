@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
 import { useApi } from "../hooks/"
 
-function ExpensesContainer(props) {
+export function ExpensesContainer(props) {
   const { children } = props
   const { data, get } = useApi("expenses")
 
@@ -12,5 +12,3 @@ function ExpensesContainer(props) {
 
   return children(data)
 }
-
-export default ExpensesContainer

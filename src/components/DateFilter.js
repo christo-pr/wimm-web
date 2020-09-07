@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker"
 
 import utils from "../utils"
 
-function DateFilter() {
+export function DateFilter() {
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(utils.addMonths(startDate, 1))
 
@@ -25,5 +25,3 @@ function DateFilter() {
     </div>
   )
 }
-
-export default DateFilter

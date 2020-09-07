@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import UIkit from "uikit"
 import { Link } from "@reach/router"
 
-function Sidebar(props) {
+export function Sidebar(props) {
   const { id } = props
   const offCanvas = useRef(null)
 
@@ -66,5 +66,3 @@ function Sidebar(props) {
     </div>
   )
 }
-
-export default Sidebar

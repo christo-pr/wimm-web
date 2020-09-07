@@ -1,8 +1,8 @@
 import React from "react"
 
-import Money from "./Money"
+import { Money } from "./Money"
 
-function PaycheckItem(props) {
+export function PaycheckItem(props) {
   return (
     <>
       <dt>Description</dt>
@@ -22,5 +22,3 @@ function PaycheckItem(props) {
     </>
   )
 }
-
-export default PaycheckItem

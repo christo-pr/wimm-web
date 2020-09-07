@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 
-import Category from "./Category"
+import { Category } from "./Category"
 
 const CATEGORIES = [
   "cart",
@@ -22,7 +22,7 @@ const ICONS = {
 }
 const categorySelectorId = "category-selector"
 
-function CategorySelector(props) {
+export function CategorySelector(props) {
   const { selectedCategory, onSelectCategory } = props
   const modalButtonRef = useRef()
 
@@ -59,5 +59,3 @@ function CategorySelector(props) {
     </>
   )
 }
-
-export default CategorySelector
