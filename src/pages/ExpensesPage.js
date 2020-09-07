@@ -3,7 +3,7 @@ import React from "react"
 import { DateFilter, ExpenseItem, ExpenseForm, Money } from "../components/"
 import { ExpensesContainer } from "../containers/"
 
-function Expenses() {
+export function ExpensesPage() {
   return (
     <ExpensesContainer>
       {({ expenses, loading, error }) => (
@@ -35,5 +35,3 @@ function Expenses() {
     </ExpensesContainer>
   )
 }
-
-export default Expenses

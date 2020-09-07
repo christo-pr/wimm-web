@@ -1,12 +1,12 @@
 import React from "react"
 
-import { DateFilter, PaymentItem, PaymentForm, Money } from "../components/"
-import { PaymentsContainer } from "../containers/"
+import { PaymentsContainer } from "../containers/PaymentsContainer"
+import { DateFilter, PaymentItem, PaymentForm } from "../components/"
 
-function Payments() {
+export function PaymentsPage() {
   return (
     <PaymentsContainer>
-      {({ payments, loading, error}) => (
+      {({ payments, loading, error }) => (
         <>
           <div className="uk-flex uk-flex-column uk-flex-center uk-background-default">
             <PaymentForm />
@@ -16,7 +16,7 @@ function Payments() {
             className="uk-list uk-list-divider"
             uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 500"
           >
-            {payments.map(payment => (
+            {payments.map((payment) => (
               <PaymentItem key={payment.id} payment={payment} />
             ))}
           </ul>
@@ -25,5 +25,3 @@ function Payments() {
     </PaymentsContainer>
   )
 }
-
-export default Payments

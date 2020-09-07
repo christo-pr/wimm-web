@@ -57,5 +57,3 @@ export function Sidebar(props) {
     </div>
   )
 }
-
-export default Sidebar
