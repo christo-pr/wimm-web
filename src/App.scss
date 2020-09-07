@@ -75,12 +75,18 @@ nav {
 }
 
 /*
-* Category icon
+* Circle button icon
 */
-.category-icon {
+.button-circle-icon {
   text-align: center;
   transition: 0.3s;
   margin-right: 1rem;
+  background: inherit;
+  border: 0;
+
+  &:focus {
+    outline: 0;
+  }
 
   &.selected {
     > span {
@@ -175,5 +181,35 @@ nav {
   &.uk-active {
     left: 0;
     width: 100% !important;
+  }
+}
+
+/*
+* Paycheck Tracker
+*
+*/
+.paycheck-amount {
+  overflow: hidden;
+  flex-basis: 100%;
+  padding-top: 0;
+
+  form {
+    margin-bottom: 20px;
+    input {
+      font-size: 1rem;
+      // border: 0;
+      width: 100px;
+    }
+  }
+  button {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+  }
+}
+.paycheck-add-btn {
+  &.uk-active {
+    width: 100% !important;
+    left: 0;
   }
 }
